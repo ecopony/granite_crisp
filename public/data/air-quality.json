@@ -1,0 +1,18 @@
+{
+  "lastUpdated": "2024-01-15T10:30:00Z",
+  "source": "SF Air Quality Monitoring Network",
+  "measurements": [
+    { "id": 1, "position": [-122.4194, 37.7749], "aqi": 45, "location": "Downtown SF" },
+    { "id": 2, "position": [-122.4089, 37.7837], "aqi": 52, "location": "Financial District" },
+    { "id": 3, "position": [-122.4534, 37.7648], "aqi": 38, "location": "Sunset District" },
+    { "id": 4, "position": [-122.3894, 37.7648], "aqi": 68, "location": "Mission District" },
+    { "id": 5, "position": [-122.4474, 37.8044], "aqi": 35, "location": "Marina" },
+    { "id": 6, "position": [-122.4117, 37.7548], "aqi": 72, "location": "Potrero Hill" },
+    { "id": 7, "position": [-122.4382, 37.7297], "aqi": 41, "location": "Glen Park" },
+    { "id": 8, "position": [-122.4869, 37.7694], "aqi": 33, "location": "Ocean Beach" },
+    { "id": 9, "position": [-122.3997, 37.7943], "aqi": 58, "location": "North Beach" },
+    { "id": 10, "position": [-122.435, 37.7575], "aqi": 49, "location": "Castro" },
+    { "id": 11, "position": [-122.4058, 37.7849], "aqi": 63, "location": "Chinatown" },
+    { "id": 12, "position": [-122.4661, 37.7749], "aqi": 29, "location": "Golden Gate Park" }
+  ]
+}

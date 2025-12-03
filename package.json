@@ -1,0 +1,37 @@
+{
+  "name": "granite-crisp",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "React + deck.gl playground for learning geospatial visualization",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@deck.gl/layers": "^9.2.2",
+    "@deck.gl/mapbox": "^9.2.2",
+    "@deck.gl/react": "^9.2.2",
+    "deck.gl": "^9.2.2",
+    "maplibre-gl": "^5.13.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-map-gl": "^8.1.0",
+    "zustand": "^5.0.9"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.17",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.6",
+    "vitest": "^4.0.15"
+  }
+}

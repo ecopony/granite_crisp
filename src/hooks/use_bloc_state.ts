@@ -1,5 +1,5 @@
 import { useSyncExternalStore } from 'react'
-import type { Bloc } from '../blocs/base_bloc'
+import type { Bloc } from '@granite-crisp/react-bloc'
 
 /**
  * Hook to subscribe a React component to a Bloc's state.

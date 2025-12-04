@@ -1,6 +1,6 @@
+import { Bloc } from "@granite-crisp/react-bloc";
 import type { AirQualityService } from "../../services/air_quality_service";
 import { HttpAirQualityService } from "../../services/air_quality_service";
-import { Bloc } from "../base_bloc";
 import type { MapBloc } from "../map/map_bloc";
 import type { AirQualityEvent } from "./air_quality_event";
 import type { AirQualityState } from "./air_quality_state";

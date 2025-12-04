@@ -1,6 +1,11 @@
-import { createContext, useContext, type ReactNode, type ComponentType } from "react";
-import { useSyncExternalStore } from "react";
-import type { Bloc } from "./base_bloc";
+import {
+  createContext,
+  useContext,
+  useSyncExternalStore,
+  type ReactNode,
+  type ComponentType,
+} from "react";
+import type { Bloc } from "./bloc";
 
 /**
  * Entry for MultiBlocProvider - pairs a Provider component with its bloc instance.
@@ -9,7 +14,7 @@ import type { Bloc } from "./base_bloc";
  * to be composed together. Type safety is enforced at the call site by the
  * typed hooks (useMapBlocState, etc.), not at the composition root.
  */
-type BlocProviderEntry = {
+export type BlocProviderEntry = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Provider: ComponentType<{ bloc: any; children: ReactNode }>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

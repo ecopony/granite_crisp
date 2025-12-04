@@ -1,4 +1,4 @@
-import { Bloc } from "../base_bloc";
+import { Bloc } from "@granite-crisp/react-bloc";
 import type { MapEvent } from "./map_event";
 import type { MapState } from "./map_state";
 import { initialMapState } from "./map_state";

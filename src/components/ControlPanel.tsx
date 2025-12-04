@@ -1,5 +1,5 @@
-import { useMapBloc, useMapBlocState } from "../blocs/map";
 import { useAirQualityBlocState } from "../blocs/air_quality";
+import { useMapBloc, useMapBlocState } from "../blocs/map";
 import { useSf311BlocState } from "../blocs/sf311";
 
 const LOCATIONS = [

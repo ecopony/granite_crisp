@@ -1,6 +1,6 @@
 import type { Sf311Service } from "../../services/sf311_service";
 import { HttpSf311Service } from "../../services/sf311_service";
-import { Bloc } from "../base_bloc";
+import { Bloc } from "@granite-crisp/react-bloc";
 import type { Sf311Event } from "./sf311_event";
 import type { Sf311State } from "./sf311_state";
 import { initialSf311State } from "./sf311_state";

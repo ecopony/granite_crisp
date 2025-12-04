@@ -1,4 +1,4 @@
-import { createBlocProvider } from "../bloc_provider";
+import { createBlocProvider } from "@granite-crisp/react-bloc";
 import type { Sf311Bloc } from "./sf311_bloc";
 
 /**

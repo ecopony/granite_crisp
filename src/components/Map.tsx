@@ -1,21 +1,21 @@
+import { HeatmapLayer, HexagonLayer } from "@deck.gl/aggregation-layers";
+import type { MapViewState, PickingInfo } from "@deck.gl/core";
+import { ScatterplotLayer } from "@deck.gl/layers";
+import DeckGL from "@deck.gl/react";
+import "maplibre-gl/dist/maplibre-gl.css";
 import { useCallback, useEffect } from "react";
 import { Map as MapLibreMap } from "react-map-gl/maplibre";
-import DeckGL from "@deck.gl/react";
-import { ScatterplotLayer } from "@deck.gl/layers";
-import { HexagonLayer, HeatmapLayer } from "@deck.gl/aggregation-layers";
-import type { MapViewState, PickingInfo } from "@deck.gl/core";
-import { useMapBloc, useMapBlocState } from "../blocs/map";
 import {
   useAirQualityBloc,
   useAirQualityBlocState,
   type AirQualityPoint,
 } from "../blocs/air_quality";
+import { useMapBloc, useMapBlocState } from "../blocs/map";
 import {
   useSf311Bloc,
   useSf311BlocState,
   type Sf311Request,
 } from "../blocs/sf311";
-import "maplibre-gl/dist/maplibre-gl.css";
 
 /**
  * Get color based on AQI value (EPA color scale)

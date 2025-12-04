@@ -1,9 +1,9 @@
-import { MapView } from "./components/Map";
-import { ControlPanel } from "./components/ControlPanel";
-import { MultiBlocProvider } from "./blocs/bloc_provider";
-import { MapBloc, MapBlocProvider } from "./blocs/map";
+import { MultiBlocProvider } from "@granite-crisp/react-bloc";
 import { AirQualityBloc, AirQualityBlocProvider } from "./blocs/air_quality";
+import { MapBloc, MapBlocProvider } from "./blocs/map";
 import { Sf311Bloc, Sf311BlocProvider } from "./blocs/sf311";
+import { ControlPanel } from "./components/ControlPanel";
+import { MapView } from "./components/Map";
 
 const mapBloc = new MapBloc();
 const airQualityBloc = new AirQualityBloc();

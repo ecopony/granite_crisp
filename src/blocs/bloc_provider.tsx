@@ -1,6 +1,49 @@
-import { createContext, useContext, type ReactNode } from "react";
+import { createContext, useContext, type ReactNode, type ComponentType } from "react";
 import { useSyncExternalStore } from "react";
 import type { Bloc } from "./base_bloc";
+
+/**
+ * Entry for MultiBlocProvider - pairs a Provider component with its bloc instance.
+ *
+ * Uses `any` to allow typed providers (e.g., MapBlocProvider expects MapBloc)
+ * to be composed together. Type safety is enforced at the call site by the
+ * typed hooks (useMapBlocState, etc.), not at the composition root.
+ */
+type BlocProviderEntry = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  Provider: ComponentType<{ bloc: any; children: ReactNode }>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  bloc: any;
+};
+
+/**
+ * Composes multiple bloc providers to avoid deeply nested JSX.
+ *
+ * Providers are applied in array order — first entry wraps outermost.
+ * Uses reduceRight internally so the visual order matches the nesting order.
+ *
+ * @example
+ * <MultiBlocProvider
+ *   blocs={[
+ *     { Provider: MapBlocProvider, bloc: mapBloc },
+ *     { Provider: AirQualityBlocProvider, bloc: airQualityBloc },
+ *   ]}
+ * >
+ *   <App />
+ * </MultiBlocProvider>
+ */
+export function MultiBlocProvider({
+  blocs,
+  children,
+}: {
+  blocs: BlocProviderEntry[];
+  children: ReactNode;
+}) {
+  return blocs.reduceRight<ReactNode>(
+    (acc, { Provider, bloc }) => <Provider bloc={bloc}>{acc}</Provider>,
+    children
+  );
+}
 
 /**
  * Factory function to create a typed Bloc Provider system.

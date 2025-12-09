@@ -1,0 +1,5 @@
+rasterio
+h3
+numpy
+requests
+tqdm
